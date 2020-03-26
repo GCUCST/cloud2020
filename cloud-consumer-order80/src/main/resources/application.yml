@@ -1,0 +1,19 @@
+server:
+    port: 81
+spring:
+    application:
+        name: cloud-order-service
+
+
+eureka:
+    client:
+        #注册向中心自己
+        register-with-eureka: true
+        #false自己就是注册中心，职责就是维护服务实例，不需要检索服务
+        fetch-registry: true
+        service-url:
+            #defaultZone: http://localhost:7001/eureka
+            defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+    instance:
+        instance-id: order80
+        prefer-ip-address: true  #访问路径显示地址

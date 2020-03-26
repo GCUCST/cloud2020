@@ -1,0 +1,20 @@
+server:
+  port: 3345
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:GCUCST/springcloud.git
+          search-paths: springcloud
+          username: 13144061737@163.com
+          password: qq1131460769
+          timeout: 100
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka

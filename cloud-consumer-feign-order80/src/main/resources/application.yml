@@ -1,0 +1,19 @@
+server:
+  port: 81
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+
+#openfeign请求超时配置
+ribbon:
+  #建立连接所需要的时间
+  ReadTimeout:  5000
+  #发请求取资源所需要的超时时间
+  ConnectTimeout:  15000
+
+logging:
+  level:
+    com.cst.springcloud.service.PaymentFeignService: debug
